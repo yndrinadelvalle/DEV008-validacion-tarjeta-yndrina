@@ -113,3 +113,75 @@ background-size: cover;
     justify-content: space-between
     margin-top: 20px;
 }
+
+.trasera {
+    background: url(https://i.ibb.co/f051Rw7/34578.jpg);
+background-size: cover;
+  position: absolute;
+  top: 0;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+
+}
+
+.trasera .barra-magnetica {
+    height: 40px;
+    background: black;
+    width: 100%;
+    position: absolute;
+    top: 30px;
+    left: 0;
+}
+
+
+.trasera .datos {
+    margin-top: 60px;
+    display: flex;
+justify-content: space-between;
+
+
+
+}
+
+.trasera .datos {
+    margin-bottom: 5px;
+
+}
+
+.trasera .datos #firma{
+width: 70%;
+
+
+}
+
+.trasera .datos #firma .firma {
+height: 40px;
+background: repeating-linear-gradient(skyblue 0, skyblue 5px, orange 5px, orange 10px);
+}
+
+.trasera .datos #ccv {
+
+    width:20%;
+
+}
+
+.trasera .datos #ccv .ccv {
+    background: white;
+    height: 40px;
+    color:black;
+    padding: 0px;
+    text-align: center;
+
+}
+.trasera .leyenda {
+    font-size: 14px;
+    line-height: 24px;
+
+
+}
+
+
+.trasera .link-banco {
+font-size: 14px;
+color:white;
+}
