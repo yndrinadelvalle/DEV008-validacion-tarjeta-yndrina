@@ -1,5 +1,5 @@
-import esValida from '../src/validator.js';
-import enmascararTarjeta from '../src/index.js';
+import {esValida, enmascararTarjeta} from '../src/validator.js';
+
 
 describe('esValida', () => {
   it('debería ser un objeto', () => {

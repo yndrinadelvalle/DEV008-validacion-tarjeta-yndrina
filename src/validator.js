@@ -1,23 +1,23 @@
-function esValida (digitosTarjeta){ 
+export function esValida (digitosTarjeta){ 
 
-  let par = [];
-  let impar = [];
+  const  par = [];
+  const impar = [];
   let resultado = 0;
  
   digitosTarjeta = Array.from(digitosTarjeta).reverse();
  
-  for (let i in digitosTarjeta) {
+  for (const i in digitosTarjeta) {
     digitosTarjeta[i] = parseInt(digitosTarjeta[i]);
 
     if (i % 2 !== 0) {
       par.push(digitosTarjeta[i] * 2);
 
-      for (let j in par) {  
-          if (par[j] > 9) {
+      for (const j in par) {  
+        if (par[j] > 9) {
           par[j] = (parseInt(par[j] % 10)) + (parseInt(par[j] / 10));
         }
       }
-  } else {
+    } else {
       impar.push(digitosTarjeta[i]);
     }
   }
@@ -35,5 +35,21 @@ function esValida (digitosTarjeta){
   }
 }
 
-export default esValida;
 
+
+export function enmascararTarjeta(numeroTarjeta) {
+  
+  const longitudTarjeta = numeroTarjeta.length;
+  let tarjetaEnmascarada = "";
+  
+  // Enmascara todos los dígitos excepto los últimos 4
+  for (let i = 0; i < longitudTarjeta - 4; i++) {
+    tarjetaEnmascarada += "#";
+  }
+  
+  // Agrega los últimos 4 dígitos sin enmascarar
+  tarjetaEnmascarada += numeroTarjeta.slice(-4);
+  
+  return tarjetaEnmascarada;
+
+}
