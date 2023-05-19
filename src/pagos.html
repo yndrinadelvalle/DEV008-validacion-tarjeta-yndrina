@@ -6,69 +6,50 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-  
-<div class="contenedor"> 
- <section class="tarjeta active" id="tarjeta"> 
-  <div class="delantera">
+  <h1 id="tit"> VERIFICA TU TARJETA</h1>
 
-  <div class="logo-marca">
-    <img src="https://i.ibb.co/FhbJ0fY/mastercard-png.png" alt="">
-  </div>
-   <img src="https://i.ibb.co/tbW75xD/chip-png.png" class="chip" alt="">
 
-  <div class="datos">
-    <div class="grupo" id ="numero">
-      <p class="label"> Numero tarjeta</p>
-      <p class="numero"> #### #### #### ####</p>
-      
-    </div>
-<div class="flexbox"> 
-  <div class="grupo" id="nombre">
-    <p class="label">Nombre de tarjeta</p> 
-    <p class="nombre"> Pepito Perez </p>
-  </div>
-
-<div class="grupo" id="expiracion"> 
-  <p class="label">expiracion</p> 
-  <p class="expiracion"> <span class="mes"> MM </span> / <spam class="year"> AA </spam> </p>
-</div>
+  <div class="credit-card">
+  <div class="chip"></div>
+  <div class="number">1234 5678 9012 3456</div>
+  <div class="name">PEPITO PEREZ</div>
+  <div class="logo"></div>
 </div>
 
-  </div>
 
-  </div>
+      <br>
 
-  <div class="trasera">
-    <div class="barra-magnetica"></div>
-    <div class="datos">
-        <div class="grupo" id="firma"> 
-            <p clase="label">Firma</p>
-            <div class="firma"><p></p></div>
-        </div>
-        <div class="grupo" id="ccv">
-          <p class="label">CCV</p>
-          <p class="ccv"></p>
-
-        </div>
-    </div>
-    <p class="leyenda">Esta tarjeta es de uso unico del propietario, es instransferible y no puede ser utilizada sin la autorizacion de su propietario</p>
-  <a href="#" class="link-banco"> www.bancodelvalle.com.co</a>
-  </div>
-
-
-
- </section>
-
+      <br>
   
+<form id="formulario" action="index.js" method="POST" >
+  
+  <label for="nombre-tarjeta">Nombre:</label>
+  <input type="text" id="nombre-tarjeta" placeholder=" Nombre" required>
+
+   <label for="numero-tarjeta">Numero de tarjeta:</label>
+   <input type="text" id="numero-tarjeta" onkeydown="" maxlength="16" placeholder="solo se permite numeros" pattern="[0-9]*" required> 
+
+    <label for="expiracion-tarjeta">Fecha de expiracion:</label>
+<input type="text" id="expiracion-tarjeta"  placeholder="MM/AA" required>
+
+  <label for="cvv-tarjeta">CVV</label>
+  <input type="text" id="cvv-tarjeta" placeholder="reverso tarjeta" required>
 
  
+  <button id="miboton"> VALIDAR </button>
+
+  </form>
+
+
+
+
 
     <header></header>
     <main></main>
     <footer></footer>
-    <script src="index.ñs" type="module"></script>
-    <script src="https://kit.fontawesome.com/2c36e9b721.js" crossorigin="anonymous"></script>
-  
+    <script src="index.js" type="module"></script>
+    
+    
   
   </body>
 </html>

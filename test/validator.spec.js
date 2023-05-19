@@ -1,44 +1,44 @@
-// importamos el objeto `validator`, que contiene las funciones `isValid` y `maskify`
-import validator from '../src/validator';
+import esValida from '../src/validator.js';
+import enmascararTarjeta from '../src/index.js';
 
-describe('validator', () => {
+describe('esValida', () => {
   it('debería ser un objeto', () => {
-    expect(typeof validator).toBe('object');
+    expect(typeof esValida).toBe('object');
   });
 
-  describe('validator.isValid', () => {
+  describe('esValida', () => {
     it('debería ser una función', () => {
-      expect(typeof validator.isValid).toBe('function');
+      expect(typeof esValida).toBe('function');
     });
 
     it('debería retornar true para "4083952015263"', () => {
-      expect(validator.isValid('4083952015263')).toBe(true);
+      expect(esValida('4083952015263')).toBe(true);
     });
 
     it('debería retornar true para "79927398713"', () => {
-      expect(validator.isValid('79927398713')).toBe(true);
+      expect(esValida('79927398713')).toBe(true);
     });
 
     it('debería retornar false para "1234567890"', () => {
-      expect(validator.isValid('1234567890')).toBe(false);
+      expect(esValida('1234567890')).toBe(false);
     });
   });
 
-  describe('validator.maskify', () => {
+  describe('enmascararTarjeta', () => {
     it('debería ser una función', () => {
-      expect(typeof validator.maskify).toBe('function');
+      expect(typeof enmascararTarjeta).toBe('function');
     });
 
     it('Debería retornar "############5616" para "4556364607935616"', () => {
-      expect(validator.maskify('4556364607935616')).toBe('############5616');
+      expect(enmascararTarjeta('4556364607935616')).toBe('############5616');
     });
 
     it('Debería retornar "1" para "1"', () => {
-      expect(validator.maskify('1')).toBe('1');
+      expect(enmascararTarjeta('1')).toBe('1');
     });
 
     it('Debería retornar "######orld" para "helloworld"', () => {
-      expect(validator.maskify('helloworld')).toBe('######orld');
+      expect(enmascararTarjeta('helloworld')).toBe('######orld');
     });
   });
 });
